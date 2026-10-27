@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 48px, 950px);
+  margin-inline: auto;
+}
+
+/* Top hero */
+.hero,
+.footer {
+  background: #1f2937;
+  color: #f9faf8;
+}
+
+.hero {
+  padding-bottom: 61px;
+}
+
+.navbar {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a,
+.hero-copy p,
+.hero-image {
+  color: #e5e7eb;
+  font-size: 12px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  padding-top: 34px;
+}
+
+.hero-copy {
+  flex: 1;
+  max-width: 390px;
+}
+
+.hero-copy h1 {
+  max-width: 340px;
+  margin: 0 0 7px;
+  color: #f9faf8;
+  font-size: 36px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.hero-copy p {
+  margin: 0 0 13px;
+  line-height: 1.25;
+}
+
+.button {
+  display: inline-flex;
+  min-width: 86px;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: #3882f6;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1;
+  min-height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6d747d;
+  text-align: center;
+}
+
+/* Information cards */
+.information {
+  padding: 36px 0 86px;
+  background: #fff;
+  text-align: center;
+}
+
+.information h2 {
+  margin: 0 0 34px;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+}
+
+.info-card {
+  width: 120px;
+  text-align: left;
+}
+
+.illustration {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #3882f6;
+  border-radius: 12px;
+}
+
+.info-card p {
+  margin: 7px 0 0;
+  color: #4b5563;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Testimonial */
+.quote-section {
+  padding: 96px 0 90px;
+  background: #e5e7eb;
+}
+
+.quote {
+  max-width: 700px;
+}
+
+.quote blockquote {
+  margin: 0;
+  color: #4b5563;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.quote figcaption {
+  margin-top: 4px;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Call to action */
+.cta-section {
+  padding: 74px 0;
+  background: #fff;
+}
+
+.cta {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 80px;
+  border-radius: 6px;
+  background: #3882f6;
+  color: #fff;
+}
+
+.cta-copy h2 {
+  margin: 0 0 3px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.cta-copy p {
+  margin: 0;
+  color: #e5edff;
+  font-size: 12px;
+}
+
+.button-outline {
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 12px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 36px, 950px);
+  }
+
+  .navbar {
+    padding-block: 14px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px 14px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    padding-top: 38px;
+  }
+
+  .hero-copy {
+    max-width: 480px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(30px, 8vw, 36px);
+  }
+
+  .hero-image {
+    min-height: 180px;
+  }
+
+  .info-grid {
+    flex-wrap: wrap;
+    gap: 28px 22px;
+  }
+
+  .info-card {
+    width: min(42%, 140px);
+  }
+
+  .illustration {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .quote-section {
+    padding: 64px 0;
+  }
+
+  .quote blockquote {
+    font-size: 23px;
+  }
+
+  .cta {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .info-grid {
+    gap: 24px 16px;
+  }
+
+  .info-card {
+    width: calc(50% - 8px);
+  }
+
+  .cta-copy h2 {
+    font-size: 17px;
+  }
+}
